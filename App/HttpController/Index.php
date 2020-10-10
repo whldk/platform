@@ -1,9 +1,6 @@
-<?php
+<?php namespace App\HttpController;
 
-
-namespace App\HttpController;
-
-
+use App\Exceptions\ApiException;
 use EasySwoole\Http\AbstractInterface\Controller;
 
 class Index extends Controller
@@ -11,6 +8,7 @@ class Index extends Controller
 
     public function index()
     {
+        throw new ApiException([1, 'hello']);
         $file = EASYSWOOLE_ROOT.'/vendor/easyswoole/easyswoole/src/Resource/Http/welcome.html';
         if(!is_file($file)){
             $file = EASYSWOOLE_ROOT.'/src/Resource/Http/welcome.html';
