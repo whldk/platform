@@ -32,5 +32,5 @@ return [
         'database'      => 'plathform',
         'POOL_MAX_NUM'  => '20',
         'POOL_TIME_OUT' => '0.1',
-    ],
+    ]
 ];
