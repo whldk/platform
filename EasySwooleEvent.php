@@ -21,7 +21,6 @@ class EasySwooleEvent implements Event
         $config = new \EasySwoole\ORM\Db\Config(Config::getInstance()->getConf('MYSQL'));
         $config->setMaxObjectNum(20); //配置连接池最大数量
         DbManager::getInstance()->addConnection(new Connection($config));
-
         Di::getInstance()->set(SysConst::HTTP_EXCEPTION_HANDLER,[ExceptionHandler::class,'handle']);
     }
 
