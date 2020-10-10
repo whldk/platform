@@ -1,4 +1,6 @@
-<?php namespace App\Model\Admin;
+<?php
+
+namespace App\Model\Admin;
 
 use EasySwoole\ORM\AbstractModel;
 

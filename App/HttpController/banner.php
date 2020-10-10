@@ -1,10 +1,11 @@
 <?php namespace App\HttpController;
 
-use App\HttpController\Api\Common\CommonBase;
+
 use App\Model\Admin\BannerModel;
+use EasySwoole\Http\AbstractInterface\Controller;
 use EasySwoole\Http\Message\Status;
 
-class Banner extends CommonBase
+class Banner extends Controller
 {
     public function getOne()
     {
