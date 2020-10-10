@@ -27,4 +27,9 @@ class Index extends Controller
         }
         $this->response()->write(file_get_contents($file));
     }
+
+    public function hello()
+    {
+        $this->response()->write('hello world');
+    }
 }
