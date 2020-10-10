@@ -4,13 +4,25 @@ use App\Model\Admin\BannerModel;
 use EasySwoole\Http\AbstractInterface\Controller;
 use EasySwoole\Http\Message\Status;
 
-class Test extends Controller
+class Ces extends Controller
 {
     public function index()
     {
         $this->response()->write('hello world test');
     }
 
+    public function getOne()
+    {
+        $param = $this->request()->getRequestParam();
+        $model = new BannerModel();
+        $bean = $model->get($param['bannerId']);
+        if ($bean) {
+            $this->writeJson(Status::CODE_OK, $bean, "success");
+        } else {
+            $this->writeJson(Status::CODE_BAD_REQUEST, [], 'fail');
+        }
+    }
+    
     public function getAll()
     {
         $param = $this->request()->getRequestParam();
