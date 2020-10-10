@@ -1,9 +1,8 @@
 <?php
 namespace EasySwoole\EasySwoole;
 
-
-use App\Exceptions\ExceptionHandler;
 use EasySwoole\Component\Di;
+use App\Exceptions\ExceptionHandler;
 use EasySwoole\EasySwoole\Swoole\EventRegister;
 use EasySwoole\EasySwoole\AbstractInterface\Event;
 use EasySwoole\Http\Request;
