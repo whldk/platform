@@ -1,5 +1,6 @@
 <?php namespace App\HttpController;
 
+
 use App\Exceptions\ApiException;
 use EasySwoole\Http\AbstractInterface\Controller;
 
@@ -32,6 +33,12 @@ class Index extends Controller
 
     public function test()
     {
-        throw new ApiException([1,"Controller Exception"]);
+        throw new ApiException([1,"Controller Exception1123"]);
     }
+
+    //重写父类的exception处理方法
+//    public function  onException(\Throwable $throwable): void
+//    {
+//        var_dump("exception controller");
+//    }
 }
