@@ -29,7 +29,7 @@ return [
         'password'      => '47.102.96.5',
         'timeout'       => '5',
         'charset'       => 'utf8mb4',
-        'database'      => 'mengoo-esp',
+        'database'      => 'plathform',
         'POOL_MAX_NUM'  => '20',
         'POOL_TIME_OUT' => '0.1',
     ],
