@@ -1,7 +1,6 @@
 <?php namespace App\HttpController;
 
-
-use App\Exceptions\ApiException;
+use App\Exception\ApiException;
 use EasySwoole\Http\AbstractInterface\Controller;
 
 class Index extends Controller
