@@ -4,7 +4,7 @@ use App\HttpController\Api\Common\CommonBase;
 use App\Model\Admin\BannerModel;
 use EasySwoole\Http\Message\Status;
 
-class banner extends CommonBase
+class Banner extends CommonBase
 {
     public function getOne()
     {
@@ -26,5 +26,10 @@ class banner extends CommonBase
         $model = new BannerModel();
         $data = $model->getAll($page, 1,$param['keyword']??null, $limit);
         $this->writeJson(Status::CODE_OK, $data, 'success');
+    }
+
+    public function test()
+    {
+        $this->response()->write('hello world test');
     }
 }
