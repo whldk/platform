@@ -26,6 +26,7 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         ),
         'E' => 
         array (
+            'EasySwoole\\WeChat\\' => 18,
             'EasySwoole\\Utility\\' => 19,
             'EasySwoole\\Trigger\\' => 19,
             'EasySwoole\\Task\\' => 16,
@@ -34,13 +35,24 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
             'EasySwoole\\Socket\\' => 18,
             'EasySwoole\\Session\\Test\\' => 24,
             'EasySwoole\\Session\\' => 19,
+            'EasySwoole\\Pool\\Tests\\' => 22,
+            'EasySwoole\\Pool\\' => 16,
+            'EasySwoole\\Pay\\' => 15,
+            'EasySwoole\\ORM\\' => 15,
+            'EasySwoole\\Mysqli\\Tests\\' => 24,
+            'EasySwoole\\Mysqli\\' => 18,
             'EasySwoole\\Log\\' => 15,
             'EasySwoole\\Http\\' => 16,
+            'EasySwoole\\HttpClient\\Test\\' => 27,
+            'EasySwoole\\HttpClient\\' => 22,
             'EasySwoole\\EasySwoole\\' => 22,
+            'EasySwoole\\DDL\\Test\\' => 20,
+            'EasySwoole\\DDL\\' => 15,
             'EasySwoole\\Config\\Test\\' => 23,
             'EasySwoole\\Config\\' => 18,
             'EasySwoole\\Component\\Tests\\' => 27,
             'EasySwoole\\Component\\' => 21,
+            'EasySwoole\\AtomicLimit\\' => 23,
         ),
         'C' => 
         array (
@@ -64,6 +76,10 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'EasySwoole\\WeChat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/wechat/src',
         ),
         'EasySwoole\\Utility\\' => 
         array (
@@ -97,6 +113,30 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         array (
             0 => __DIR__ . '/..' . '/easyswoole/session/src',
         ),
+        'EasySwoole\\Pool\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/pool/tests',
+        ),
+        'EasySwoole\\Pool\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/pool/src',
+        ),
+        'EasySwoole\\Pay\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/pay/src',
+        ),
+        'EasySwoole\\ORM\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/orm/src',
+        ),
+        'EasySwoole\\Mysqli\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/mysqli/tests',
+        ),
+        'EasySwoole\\Mysqli\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/mysqli/src',
+        ),
         'EasySwoole\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/log/src',
@@ -105,9 +145,25 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         array (
             0 => __DIR__ . '/..' . '/easyswoole/http/src',
         ),
+        'EasySwoole\\HttpClient\\Test\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/http-client/tests',
+        ),
+        'EasySwoole\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/http-client/src',
+        ),
         'EasySwoole\\EasySwoole\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/easyswoole/src',
+        ),
+        'EasySwoole\\DDL\\Test\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/ddl/test',
+        ),
+        'EasySwoole\\DDL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/ddl/src',
         ),
         'EasySwoole\\Config\\Test\\' => 
         array (
@@ -124,6 +180,10 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         'EasySwoole\\Component\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/component/src',
+        ),
+        'EasySwoole\\AtomicLimit\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/atomic-limit/src',
         ),
         'Cron\\' => 
         array (
