@@ -12,11 +12,11 @@ class ExceptionHandler
             $code = $exception->getCode();
             $msg = $exception->getMessage();
         } else {
-            $code=$exception->getCode();
-            if(!isset($code)||$code<0){
+            $code = $exception->getCode();
+            if(!isset($code) || $code < 0){
                 $code = -1;
             }
-            $msg = empty($exception->getMessage())?"unknow":$exception->getMessage();
+            $msg = ($exception->getMessage()) ?? 'unknow';
         }
         $data['code'] = $code;
         $data['msg'] = $msg;

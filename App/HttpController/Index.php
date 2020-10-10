@@ -35,9 +35,4 @@ class Index extends Controller
         throw new ApiException([1,"Controller Exception1123"]);
     }
 
-    //重写父类的exception处理方法
-//    public function  onException(\Throwable $throwable): void
-//    {
-//        var_dump("exception controller");
-//    }
 }
