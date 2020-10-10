@@ -3,6 +3,7 @@ namespace EasySwoole\EasySwoole;
 
 
 use App\Exceptions\ExceptionHandler;
+use EasySwoole\Component\Di;
 use EasySwoole\EasySwoole\Swoole\EventRegister;
 use EasySwoole\EasySwoole\AbstractInterface\Event;
 use EasySwoole\Http\Request;
