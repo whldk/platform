@@ -8,7 +8,6 @@ class Index extends Controller
 
     public function index()
     {
-        throw new ApiException([1, 'hello']);
         $file = EASYSWOOLE_ROOT.'/vendor/easyswoole/easyswoole/src/Resource/Http/welcome.html';
         if(!is_file($file)){
             $file = EASYSWOOLE_ROOT.'/src/Resource/Http/welcome.html';
@@ -29,5 +28,10 @@ class Index extends Controller
     public function hello()
     {
         $this->response()->write('hello world');
+    }
+
+    public function test()
+    {
+        throw new ApiException([1,"Controller Exception"]);
     }
 }
