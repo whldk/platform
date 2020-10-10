@@ -38,7 +38,7 @@ class Test extends Controller
             //构建sql
             $client->queryBuilder()->get('user_list');
             //执行sql
-            var_dump($client->execBuilder());
+            $client->execBuilder();
         });
     }
 }
