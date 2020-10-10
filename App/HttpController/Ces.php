@@ -50,7 +50,8 @@ class Ces extends Controller
             //构建sql
             $client->queryBuilder()->get('user_list');
             //执行sql
-            var_dump($client->execBuilder());
+            $res = $client->execBuilder();
+            $this->writeJson(Status::CODE_OK, $res, 'success');
         });
     }
 }
