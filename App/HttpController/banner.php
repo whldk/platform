@@ -1,6 +1,5 @@
 <?php namespace App\HttpController;
 
-
 use App\Model\Admin\BannerModel;
 use EasySwoole\Http\AbstractInterface\Controller;
 use EasySwoole\Http\Message\Status;
