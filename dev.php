@@ -23,7 +23,7 @@ return [
     'LOG_DIR' => null,
     /*################ MYSQL CONFIG ##################*/
     'MYSQL' => [
-        'host'          => '47.102.96.5',
+        'host'          => '101.132.146.43',
         'port'          => '3306',
         'user'          => 'root',
         'password'      => 'Mengoo2020!',
