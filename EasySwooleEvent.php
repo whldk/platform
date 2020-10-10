@@ -27,6 +27,10 @@ class EasySwooleEvent implements Event
     public static function mainServerCreate(EventRegister $register)
     {
         // TODO: Implement mainServerCreate() method.
+        $register->add($register::onWorkerStart, function (){
+            //链接预热
+            DbManager::getInstance()->getConnection()->getClientPool()->keepMin();
+        });
     }
 
     public static function onRequest(Request $request, Response $response): bool
