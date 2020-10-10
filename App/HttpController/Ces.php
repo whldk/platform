@@ -22,7 +22,7 @@ class Ces extends Controller
             $this->writeJson(Status::CODE_BAD_REQUEST, [], 'fail');
         }
     }
-    
+
     public function getAll()
     {
         $param = $this->request()->getRequestParam();
@@ -36,8 +36,8 @@ class Ces extends Controller
     public function getData()
     {
         $config = new \EasySwoole\Mysqli\Config([
-            'host'          => '47.102.96.5',
-            'port'          => 3300,
+            'host'          => '127.0.0.1',
+            'port'          => 3306,
             'user'          => 'root',
             'password'      => 'Mengoo2020!',
             'database'      => 'plathform',
@@ -50,7 +50,7 @@ class Ces extends Controller
             //构建sql
             $client->queryBuilder()->get('user_list');
             //执行sql
-            $client->execBuilder();
+            var_dump($client->execBuilder());
         });
     }
 }
