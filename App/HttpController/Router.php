@@ -9,22 +9,8 @@ class Router extends AbstractRouter
 {
     public function initialize(RouteCollector $routeCollector)
     {
-        // TODO: Implement initialize() method.
-        $routeCollector->addRoute('GET','/Banner/getAll');
-        $routeCollector->addRoute('GET','/Banner/getOne/{id:\d+}');
-        //闭包
-        $routeCollector->addRoute('GET', '/test/{id:\d+}', function (Request $request, Response $response) {
-            $id = $request->getQueryParam('id');
-            $response->write('Userid : ' . $id);
-            return false;
-        });
+        $routeCollector->get('/banner', '/Banner/getAll');
 
-        //闭包分组
-        $routeCollector->addGroup('/admin', function (RouteCollector $collector){
-            $collector->addRoute('GET', '/user', function (Request $request, Response $response){
-                var_dump($request);
-                return false;
-            });
-        });
+        $routeCollector->addRoute(['GET', 'POST'], '/banner-one', '/Banner/getOne/{id:\d+}');
     }
 }
