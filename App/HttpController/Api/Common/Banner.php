@@ -3,7 +3,7 @@
 use App\Model\Admin\BannerModel;
 use EasySwoole\Http\Message\Status;
 
-class banner extends CommonBase
+class Banner extends CommonBase
 {
     public function getOne()
     {
