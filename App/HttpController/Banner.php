@@ -10,7 +10,8 @@ class Banner extends Controller
     {
         $param = $this->request()->getRequestParam();
         $model = new BannerModel();
-        $bean = $model->get($param['bannerId']);
+        $id = isset($param['bannerId']) ? $param['bannerId'] : null;
+        $bean = $model->get($id);
         if ($bean) {
             $this->writeJson(Status::CODE_OK, $bean, "success");
         } else {
