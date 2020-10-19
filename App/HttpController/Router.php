@@ -11,6 +11,6 @@ class Router extends AbstractRouter
     {
         $routeCollector->get('/banner', '/Banner/getAll');
 
-        $routeCollector->addRoute(['GET', 'POST'], '/banner-one', '/Banner/getOne/{id:\d+}');
+        $routeCollector->addRoute(['GET', 'POST'], '/banner-one/{id:\d+}', '/Banner/getOne');
     }
 }
