@@ -19,7 +19,7 @@ class Router extends AbstractRouter
         $routeCollector->get('/banner', '/Banner/getAll');
         $routeCollector->get('/banner-view/{id:\d+}', '/Banner/getOne');
         //允许多种请求方式
-        //$routeCollector->addRoute(['GET', 'POST'], '/banner-one/{id:\d+}', '/Banner/getOne');
+        $routeCollector->addRoute(['GET', 'POST'], '/banner-one/{id:\d+}', '/Banner/test');
         //路由分组
         $routeCollector->addGroup('/test', function (RouteCollector $collector) {
             $collector->addRoute('GET', '/index', function (Request $request, Response $response) {

@@ -31,6 +31,6 @@ class Banner extends Controller
 
     public function test()
     {
-        $this->response()->write('hello world test');
+        $this->writeJson(200,'hello world test', 'success');
     }
 }
