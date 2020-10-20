@@ -5,9 +5,11 @@ use EasySwoole\ORM\AbstractModel;
 class UserModel extends AbstractModel
 {
     protected $tableName = 'user';
+    
     protected $autoTimeStamp = true;
     protected $createTime = 'created_at';
     protected $updateTime = 'updated_at';
+
     public $casts = [
         'id' => 'string',
         'school_id' => 'string',

@@ -1,37 +1,31 @@
 <?php namespace App\HttpController\Common;
 
 use App\Exception\AuthException;
+use EasySwoole\Validate\Validate;
 
 class Controller extends \EasySwoole\Http\AbstractInterface\Controller
 {
     protected $access = [];       //auth 验证
     protected $filter = [];       //控制器层-参数过滤
+    protected $params = [];
 
     protected function onRequest(string $action): ?bool
-    {
-        $auth = $this->beforRun();
-        if ($auth !== true) {
-            return false;
-        }
-        return true;
-    }
-
-    public function beforRun()
     {
         //access
         if (!$this->access()) {
             //$res = $this->user->getIdentity();
-            throw new AuthException();
+            throw new AuthException('401 or 403', 401);
         }
+        
         //params
         $this->params = $this->request()->getRequestParam();
 
-        //filter
-        if (($valid = $this->filter()) !== true) {
+        //filter params
+        
 
-        }
+        return true;
     }
-
+    
     public function access()
     {
         $action = $this->getActionName();
@@ -46,7 +40,8 @@ class Controller extends \EasySwoole\Http\AbstractInterface\Controller
             return true;
         }
         //登录获取用户身份信息
-        $role = $this->user->getRole();
+        //$role = $this->user->getRole();
+        $role = '?';
         if ($role == '?') {
             if (in_array($role, $access, true)) {
                 return true;
@@ -63,8 +58,5 @@ class Controller extends \EasySwoole\Http\AbstractInterface\Controller
 
     }
 
-    public function filter()
-    {
-        
-    }
+
 }
