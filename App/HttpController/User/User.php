@@ -1,9 +1,10 @@
 <?php namespace App\HttpController\User;
 
-use App\HttpController\Common\Controller;
+use App\HttpController\Common\BaseController;
 use App\Rules\UserRules;
 
-class User extends Controller
+
+class User extends BaseController
 {
 
     protected $access = [
@@ -14,7 +15,7 @@ class User extends Controller
 
     public function category()
     {
-
+        return $this->writeJson(200,'category', 'success');
     }
 
     public function list()
