@@ -30,9 +30,4 @@ class Index extends Controller
         $this->response()->write('hello world');
     }
 
-    public function test()
-    {
-        throw new ApiException([1,"Controller Exception1123"]);
-    }
-
 }

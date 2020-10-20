@@ -20,34 +20,31 @@ class Router extends AbstractRouter
         $routeCollector->get('/banner-view/{id:\d+}', '/Banner/getOne');
         //允许多种请求方式
         $routeCollector->addRoute(['GET', 'POST'], '/banner-test', '/Banner/test');
-        //路由分组
+        //路由分组-闭包
         $routeCollector->addGroup('/test', function (RouteCollector $collector) {
-            $collector->get('GET', '/index', function (Request $request, Response $response) {
-                $response->write('hello  user path 用户');
+            $collector->addRoute('GET', '/test', function (Request $request, Response $response) {
+                $response->withHeader('Content-Type', 'text/html; charset=UTF-8');
+                $response->write('张帅');
             });
-            $collector->get('/info', function (Request $request, Response $response){
+            $collector->get('/info', function (Request $request, Response $response) {
+                //获取所有参数
                 $data = $request->getRequestParam();
-                var_dump($data);
+                //获取指定参数
                 $orderId = $request->getRequestParam('orderId');
-                var_dump($orderId);
+                //获取多个参数
                 $mixData = $request->getRequestParam("orderId","type");
-                var_dump($mixData);
             });
         });
 
         $routeCollector->addGroup('/user', function (RouteCollector $collector) {
 
-            $collector->get('GET', '/index', function (Request $request, Response $response) {
-                $response->write('hello  user path 用户');
+            $collector->get('/index',  function (Request $request, Response $response) {
+                $response->write('hello  user index');
             });
 
-            $collector->addRoute('GET', '/test', function (Request $request, Response $response) {
-                $response->withHeader('Content-Type', 'text/html; charset=UTF-8');
-                $response->write('张帅');
-            });
-
-            $collector->get('/admin-list', '/user/controller/admin/list');
-            $collector->get('/admin-search', '/controller/admin/search');
+            $collector->get('/admin/index', '/controller/admin/index');
+            $collector->get('/admin/list', '/controller/admin/list');
+            $collector->get('/admin/search', '/controller/admin/search');
         });
 
 
