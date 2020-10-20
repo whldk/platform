@@ -17,7 +17,7 @@ class Router extends AbstractRouter
         //支持方式 GET 、 POST 、PUT 、DELETE 、patch
         //查询都是GET请求，新增都是POST，修改是PUT，删除是DELETE等
         $routeCollector->addGroup('/user', function (RouteCollector $collector) {
-            $collector->get('/init', '/user/index');
+            $collector->get('/init', '/user/user/index');
         });
     }
 }

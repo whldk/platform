@@ -1,6 +1,6 @@
 <?php namespace App\HttpController\User;
 
-use App\Model\User\UserModel;
+use App\User\UserModel;
 use EasySwoole\Http\AbstractInterface\Controller;
 
 class User extends Controller
