@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3400ad8f1a8858451f92e97e0f84eeb7",
+    "content-hash": "fbc82a1cbd2a28287fa1d62a4b0e1ca0",
     "packages": [
         {
             "name": "dragonmantank/cron-expression",
@@ -1058,6 +1058,60 @@
             ],
             "description": "easyswoole extension tool library",
             "time": "2020-05-19T03:06:24+00:00"
+        },
+        {
+            "name": "easyswoole/validate",
+            "version": "1.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/easy-swoole/validate.git",
+                "reference": "18de24c788a2f2b99090911375ef7899fdd59322"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/easy-swoole/validate/zipball/18de24c788a2f2b99090911375ef7899fdd59322",
+                "reference": "18de24c788a2f2b99090911375ef7899fdd59322",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "easyswoole/spl": "^1.0",
+                "php": ">=7.1.0",
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EasySwoole\\Validate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "YF",
+                    "email": "291323003@qq.com"
+                }
+            ],
+            "description": "An efficient swoole framework",
+            "homepage": "https://www.easyswoole.com/",
+            "keywords": [
+                "async",
+                "easyswoole",
+                "framework",
+                "swoole"
+            ],
+            "time": "2020-06-27T15:19:41+00:00"
         },
         {
             "name": "easyswoole/wechat",

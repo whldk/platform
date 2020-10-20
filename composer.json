@@ -7,7 +7,8 @@
         "easyswoole/wechat": "^1.2",
         "easyswoole/pay": "^1.28",
         "easyswoole/atomic-limit": "^1.0",
-        "easyswoole/http": "^1.7"
+        "easyswoole/http": "^1.7",
+        "easyswoole/validate": "^1.2"
     },
     "autoload": {
         "psr-4": {

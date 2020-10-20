@@ -27,6 +27,7 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         'E' => 
         array (
             'EasySwoole\\WeChat\\' => 18,
+            'EasySwoole\\Validate\\' => 20,
             'EasySwoole\\Utility\\' => 19,
             'EasySwoole\\Trigger\\' => 19,
             'EasySwoole\\Task\\' => 16,
@@ -80,6 +81,10 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         'EasySwoole\\WeChat\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/wechat/src',
+        ),
+        'EasySwoole\\Validate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/validate/src',
         ),
         'EasySwoole\\Utility\\' => 
         array (
