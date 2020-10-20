@@ -8,7 +8,7 @@ class ExceptionHandler
 {
     public static function handle(\Throwable $exception, Request $request, Response $response) {
         $data=[];
-        if ($exception instanceof  ApiException) {
+        if ($exception instanceof  AuthException) {
             $code = $exception->getCode();
             $msg = $exception->getMessage();
         } else {
