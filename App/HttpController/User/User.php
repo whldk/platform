@@ -21,7 +21,7 @@ class User extends BaseController
 
     }
 
-    public function create(UserRules $rules)
+    public function addOne(UserRules $rules)
     {
         var_dump($this->params);
         $valid = $rules::check($this->params);
