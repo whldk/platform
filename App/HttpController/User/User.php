@@ -7,9 +7,7 @@ use App\Rules\UserRules;
 class User extends BaseController
 {
 
-    protected $access = [
-        '*' => ['*']
-    ];
+    protected $access = [];
 
     protected $filter = [];
 
