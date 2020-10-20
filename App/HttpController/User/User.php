@@ -1,8 +1,8 @@
 <?php namespace App\HttpController\User;
 
 use App\HttpController\Common\BaseController;
-use App\Rules\UserRules;
 
+use App\Rules\UserRules;
 
 class User extends BaseController
 {
