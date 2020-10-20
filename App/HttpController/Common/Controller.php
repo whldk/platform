@@ -65,6 +65,6 @@ class Controller extends \EasySwoole\Http\AbstractInterface\Controller
 
     public function filter()
     {
-
+        
     }
 }
