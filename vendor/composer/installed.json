@@ -1485,62 +1485,6 @@
         "description": "easyswoole extension tool library"
     },
     {
-        "name": "easyswoole/validate",
-        "version": "1.2.6",
-        "version_normalized": "1.2.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/easy-swoole/validate.git",
-            "reference": "18de24c788a2f2b99090911375ef7899fdd59322"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/easy-swoole/validate/zipball/18de24c788a2f2b99090911375ef7899fdd59322",
-            "reference": "18de24c788a2f2b99090911375ef7899fdd59322",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "easyswoole/spl": "^1.0",
-            "php": ">=7.1.0",
-            "psr/http-message": "^1.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^7.4"
-        },
-        "time": "2020-06-27T15:19:41+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "EasySwoole\\Validate\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "YF",
-                "email": "291323003@qq.com"
-            }
-        ],
-        "description": "An efficient swoole framework",
-        "homepage": "https://www.easyswoole.com/",
-        "keywords": [
-            "async",
-            "easyswoole",
-            "framework",
-            "swoole"
-        ]
-    },
-    {
         "name": "easyswoole/wechat",
         "version": "1.2.2",
         "version_normalized": "1.2.2.0",
@@ -1675,6 +1619,62 @@
             "ids",
             "obfuscate",
             "youtube"
+        ]
+    },
+    {
+        "name": "inhere/php-validate",
+        "version": "v2.8.1",
+        "version_normalized": "2.8.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inhere/php-validate.git",
+            "reference": "3749f60dffaaaeb288bf256d096af9bd41ddd975"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inhere/php-validate/zipball/3749f60dffaaaeb288bf256d096af9bd41ddd975",
+            "reference": "3749f60dffaaaeb288bf256d096af9bd41ddd975",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": ">7.1.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.5"
+        },
+        "time": "2020-06-25T02:17:50+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inhere\\Validate\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "inhere",
+                "email": "in.798@qq.com",
+                "homepage": "http://www.yzone.net/"
+            }
+        ],
+        "description": "an simple validate, filter library of the php",
+        "homepage": "https://github.com/inhere/php-validate",
+        "keywords": [
+            "form-validate",
+            "library",
+            "php-library",
+            "validate",
+            "validation"
         ]
     },
     {

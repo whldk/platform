@@ -21,6 +21,10 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         array (
             'Opis\\Closure\\' => 13,
         ),
+        'I' => 
+        array (
+            'Inhere\\Validate\\' => 16,
+        ),
         'H' => 
         array (
             'Hashids\\' => 8,
@@ -33,7 +37,6 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         array (
             'EasySwoole\\Whoops\\' => 18,
             'EasySwoole\\WeChat\\' => 18,
-            'EasySwoole\\Validate\\' => 20,
             'EasySwoole\\Utility\\' => 19,
             'EasySwoole\\UEditor\\' => 19,
             'EasySwoole\\Trigger\\' => 19,
@@ -90,6 +93,10 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
         ),
+        'Inhere\\Validate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/inhere/php-validate/src',
+        ),
         'Hashids\\' => 
         array (
             0 => __DIR__ . '/..' . '/hashids/hashids/src',
@@ -105,10 +112,6 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         'EasySwoole\\WeChat\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/wechat/src',
-        ),
-        'EasySwoole\\Validate\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/easyswoole/validate/src',
         ),
         'EasySwoole\\Utility\\' => 
         array (
