@@ -2,7 +2,7 @@
 
 use App\HttpController\Common\BaseController;
 
-use App\Model\User\UserModel;
+use App\Models\User\UserModel;
 use App\Rules\UserRules;
 use EasySwoole\Http\Message\Status;
 
