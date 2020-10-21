@@ -127,7 +127,7 @@ class BaseController extends Controller
             $sessionKey = $this->request()->getCookieParams($this->sessionKey);
         }
         if (empty($sessionKey)) {
-            return '*';
+            return null;
         }
         $adminModel = new AdminModel();
         $adminModel->session = $sessionKey;
