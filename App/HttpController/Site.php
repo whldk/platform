@@ -19,7 +19,7 @@ class Site extends BaseController
 
     public function adminLogin()
     {
-        $valid = Validation::make($this->params, [
+        $valid = Validation::check($this->params, [
             [
                 'username', 'password', 'required',
                 'msg' => [
@@ -65,7 +65,7 @@ class Site extends BaseController
         if (empty($sessionKey)) {
             $sessionKey = $this->request()->getCookieParams($this->sessionKey);
         }
-        
+
         if (empty($sessionKey)) {
             $this->writeJson(Status::CODE_UNAUTHORIZED, '', '尚未登入');
             return false;
