@@ -7,9 +7,6 @@ class UserRules extends FieldValidation
     public function rules(): array
     {
         return [
-//            ['id', 'required', 'on' => 'view, update, delete'],
-//            ['username', 'required|string:3,12', 'on' => 'create, update'],
-//            ['password', 'required|string:3,15', 'on' => 'create, update']
             ['id', 'required'],
             ['username', 'required|string:3,12'],
             ['password', 'required|string:3,15']
@@ -28,7 +25,10 @@ class UserRules extends FieldValidation
 
     public function translates(): array
     {
-        return [];
+        return [
+            'username' => '用户名',
+            'password' => '密码'
+        ];
     }
 
     public function messages(): array
