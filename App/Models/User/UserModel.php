@@ -1,4 +1,4 @@
-<?php namespace App\Model\User;
+<?php namespace App\Models\User;
 
 use EasySwoole\ORM\AbstractModel;
 
