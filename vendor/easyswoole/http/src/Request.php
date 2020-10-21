@@ -40,7 +40,7 @@ class Request extends ServerRequest
 
     function getRequestParam(...$key)
     {
-        $data = array_merge($this->getParsedBody(),$this->getQueryParams(), $this->getCookieParams(), $this->getUploadedFiles());
+        $data = array_merge($this->getParsedBody(),$this->getQueryParams());
         if(empty($key)){
             return $data;
         }else{
