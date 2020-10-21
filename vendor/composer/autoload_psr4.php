@@ -6,18 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'Opis\\Closure\\' => array($vendorDir . '/opis/closure/src'),
-    'Inhere\\Validate\\' => array($vendorDir . '/inhere/php-validate/src'),
     'Hashids\\' => array($vendorDir . '/hashids/hashids/src'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
-    'EasySwoole\\Whoops\\' => array($vendorDir . '/easyswoole/easy-whoops/src'),
     'EasySwoole\\WeChat\\' => array($vendorDir . '/easyswoole/wechat/src'),
     'EasySwoole\\Utility\\' => array($vendorDir . '/easyswoole/utility/src'),
     'EasySwoole\\UEditor\\' => array($vendorDir . '/easyswoole/u-editor/src'),
     'EasySwoole\\Trigger\\' => array($vendorDir . '/easyswoole/trigger/src'),
-    'EasySwoole\\Template\\' => array($vendorDir . '/easyswoole/template/src'),
     'EasySwoole\\Task\\' => array($vendorDir . '/easyswoole/task/src'),
     'EasySwoole\\Spl\\Test\\' => array($vendorDir . '/easyswoole/spl/test'),
     'EasySwoole\\Spl\\' => array($vendorDir . '/easyswoole/spl/src'),

@@ -14,16 +14,11 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
-            'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
         ),
         'O' => 
         array (
             'Opis\\Closure\\' => 13,
-        ),
-        'I' => 
-        array (
-            'Inhere\\Validate\\' => 16,
         ),
         'H' => 
         array (
@@ -35,12 +30,10 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         ),
         'E' => 
         array (
-            'EasySwoole\\Whoops\\' => 18,
             'EasySwoole\\WeChat\\' => 18,
             'EasySwoole\\Utility\\' => 19,
             'EasySwoole\\UEditor\\' => 19,
             'EasySwoole\\Trigger\\' => 19,
-            'EasySwoole\\Template\\' => 20,
             'EasySwoole\\Task\\' => 16,
             'EasySwoole\\Spl\\Test\\' => 20,
             'EasySwoole\\Spl\\' => 15,
@@ -81,10 +74,6 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
     );
 
     public static $prefixDirsPsr4 = array (
-        'Psr\\Log\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
@@ -93,10 +82,6 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
         ),
-        'Inhere\\Validate\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/inhere/php-validate/src',
-        ),
         'Hashids\\' => 
         array (
             0 => __DIR__ . '/..' . '/hashids/hashids/src',
@@ -104,10 +89,6 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
-        ),
-        'EasySwoole\\Whoops\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/easyswoole/easy-whoops/src',
         ),
         'EasySwoole\\WeChat\\' => 
         array (
@@ -124,10 +105,6 @@ class ComposerStaticInitc3c6d113f847b4c3f35d198aa1247923
         'EasySwoole\\Trigger\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/trigger/src',
-        ),
-        'EasySwoole\\Template\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/easyswoole/template/src',
         ),
         'EasySwoole\\Task\\' => 
         array (
