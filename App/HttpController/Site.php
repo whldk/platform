@@ -60,7 +60,12 @@ class Site extends BaseController
 
     public function logout()
     {
-        $sessionKey = $this->params[$this->sessionKey];
+        $sessionKey = $this->request()->getRequestParam($this->sessionKey);
+
+        if (empty($sessionKey)) {
+            $sessionKey = $this->request()->getCookieParams($this->sessionKey);
+        }
+        
         if (empty($sessionKey)) {
             $this->writeJson(Status::CODE_UNAUTHORIZED, '', '尚未登入');
             return false;
