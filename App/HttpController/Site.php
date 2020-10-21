@@ -19,18 +19,9 @@ class Site extends BaseController
 
     public function adminLogin()
     {
-        $valid = Validation::check($this->params, [
-            [
-                'username', 'password', 'required',
-                'msg' => [
-                    'username' => '用户名必填',
-                    'password' => '密码不可为空'
-                ]
-            ],
-            [
-                'remember',
-                'default' => 0
-            ]
+        $valid = Validation::check($this->params,[
+            ['username,password', 'required', 'msg' => ['username' => '用户名必填', 'password' => '密码不可为空']],
+            ['remember', 'default' => 0]
         ]);
 
         if ($valid->isFail()) {
