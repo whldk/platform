@@ -5,7 +5,6 @@ use App\HttpController\Common\BaseController;
 use App\Model\User\UserModel;
 use App\Rules\UserRules;
 use EasySwoole\Http\Message\Status;
-use Inhere\Validate\Validation;
 
 class User extends BaseController
 {
@@ -13,7 +12,7 @@ class User extends BaseController
 
     public function category()
     {
-        $model = new UserModel;
+        $model = new UserModel();
         return $this->writeJson(200, $model->all());
     }
 
