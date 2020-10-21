@@ -33,7 +33,7 @@ class EasySwooleEvent implements Event
                 //写入日志
                 $sql = $builder->getLastQuery();
                 $time = bcsub(time(), $start, 3);
-                writeLog('执行时长: '. $time . 's ' .$sql);
+                writeLog('执行时长'.$time.'s' .$sql);
             });
         });
     }

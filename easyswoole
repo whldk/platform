@@ -30,12 +30,13 @@ if(!empty($ret)){
     echo $ret."\n";
 }
 
+//是否开始日志写入功能
 function writeLog($msg, $open = false) {
     //开启日记
     if ($open === DEBUG_LOG) {
         return ;
     }
-    $logPath =  EASYSWOOLE_ROOT . '/Log/' . date('Y-m-d').'.log';
+    $logPath =  EASYSWOOLE_ROOT . '/Log/db-' . date('Y-m-d').'.log';
     if( !file_exists($logPath) ) {
         $fp = fopen( $logPath,'w');
         fclose( $fp );
