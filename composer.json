@@ -15,7 +15,8 @@
         "easyswoole/easy-whoops": "3.x",
         "easyswoole/http-client": "^1.4",
         "easyswoole/redis-pool": "^2.1",
-        "inhere/php-validate": "^2.8"
+        "inhere/php-validate": "^2.8",
+        "easyswoole/socket": "^1.1"
     },
     "autoload": {
         "psr-4": {
