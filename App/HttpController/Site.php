@@ -3,13 +3,21 @@
 use App\HttpController\Common\BaseController;
 use App\Models\Admin\AdminModel;
 use EasySwoole\Http\Message\Status;
-use Inhere\Validate\Validation;
+
 
 class Site extends BaseController
 {
 
     public $access = [
         '*' => ['*']
+    ];
+
+    public $filter = [
+        'adminLogin' => [
+            '*' => [
+                'require' => ['username', 'password', 'msg' => ['username' => '用户名不可为空', 'password' => '密码不可为空']],
+            ]
+        ]
     ];
 
     public function index()
@@ -19,22 +27,9 @@ class Site extends BaseController
 
     public function adminLogin()
     {
-
-        $valid = Validation::check($this->params, [
-            ['username', 'required', 'msg' => [
-                'username' => '用户名必填']]
-        ]);
-            //->messages(['required.username' => '用户名必填', 'required.password' => '密码不可为空']);
-
-
-        if ($valid->isFail()) {
-            return $this->writeJson(Status::CODE_BAD_REQUEST, $valid->firstError(false));
-        }
-        $safeData = $valid->getSafeData(); // 验证通过的安全数据
         $model = new AdminModel;
-        $model->username = $safeData['username'];
-        $model->password = $safeData['password'];
-
+        $model->username = $this->params['username'];
+        $model->password = $this->params['password'];
         if ($admin_user = $model->login()) {
             $sessionHash = md5(time() . $admin_user->_id);
             $admin_user->update([

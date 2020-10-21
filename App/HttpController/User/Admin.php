@@ -11,7 +11,6 @@ class Admin extends BaseController
         '*' => ['admin']
     ];
 
-
     /**
      * 初始化设置
      * @param string|null $action
