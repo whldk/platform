@@ -9,14 +9,12 @@ use Inhere\Validate\Validation;
 
 class User extends BaseController
 {
-
-    protected $access = [
-        ''
-    ];
+    protected $access = [];
 
     public function category()
     {
-        return $this->writeJson(200,'category', 'success');
+        $model = new UserModel;
+        return $this->writeJson(200, $model->all());
     }
 
     public function list()
@@ -38,8 +36,6 @@ class User extends BaseController
         if ($valid->isFail()) {
             return $this->writeJson(Status::CODE_BAD_REQUEST,$valid->getErrors(), '创建用户');
         }
-        //验证成功 ...
-        //$postData = $v->all(); // 原始数据
         $safeData = $valid->getSafeData(); // 验证通过的安全数据
         $model = UserModel::create($safeData);
         $res = $model->save();

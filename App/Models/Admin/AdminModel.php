@@ -1,62 +1,60 @@
-<?php namespace App\Model\Admin;
+<?php namespace App\Models\Admin;
 
 use EasySwoole\ORM\AbstractModel;
 
 /**
  * Class AdminModel
- * Create With Automatic Generator
- * @property $adminId
- * @property $adminName
- * @property $adminAccount
- * @property $adminPassword
- * @property $adminSession
- * @property $adminLastLoginTime
- * @property $adminLastLoginIp
+ * @property $_id
+ * @property $nickname
+ * @property $username
+ * @property $password
+ * @property $session
+ * @property $last_login_time
+ * @property $last_login_ip
  */
 class AdminModel extends AbstractModel
 {
-    protected  $tableName = 'admin_list';
+    protected  $tableName = 'admin';
 
-    protected $primaryKey = 'adminId';
+    protected $primaryKey = '_id';
 
     public function getAll(int $page = 1, string $keyword = null, int $pageSize = 10): array
     {
         $where = [];
         if (!empty($keyword)) {
-            $where['adminAccount'] = ['%' . $keyword . '%', 'like'];
+            $where['username'] = ['%' . $keyword . '%', 'like'];
         }
         $list  = $this->limit($pageSize * ($page - 1), $pageSize)->order($this->primaryKey, 'DESC')->withTotalCount()->all($where);
         $total = $this->lastQueryResult()->getTotalCount();
         return ['total' => $total, 'list' => $list];
     }
 
-
     /*
      * 登录成功后请返回更新后的bean
      */
     public function login():?AdminModel
     {
-        $info = $this->get(['adminAccount' => $this->adminAccount, 'adminPassword' => $this->adminPassword]);
+        return $this->get(['username' => $this->username, 'password' => $this->password]);
         return $info;
     }
 
     /*
      * 以account进行查询
      */
-    public function accountExist($field = '*'):?AdminModel
+    public function usernameExist($field = '*'):?AdminModel
     {
-        $info = $this->field($field)->get(['adminAccount' => $this->adminAccount]);
+        $info = $this->field($field)->get(['username' => $this->username]);
         return $info;
     }
 
     public function getOneBySession($field = '*'):?AdminModel
     {
-        $info = $this->field($field)->get(['adminSession' => $this->adminSession]);
+        $info = $this->field($field)->get(['session' => $this->session]);
         return $info;
     }
 
     public function logout()
     {
-        return $this->update(['adminSession' => '']);
+        return $this->update(['session' => '']);
     }
 }

@@ -11,6 +11,7 @@ defined('EASYSWOOLE_ROOT') or define('EASYSWOOLE_ROOT', IN_PHAR ? \Phar::running
 define('DEBUG_LOG', true);
 
 $file = EASYSWOOLE_ROOT.'/vendor/autoload.php';
+
 if (file_exists($file)) {
     require $file;
 }else{
@@ -26,6 +27,7 @@ $args = $argv;
 array_shift($args);
 
 $ret = CommandRunner::getInstance()->run($args);
+
 if(!empty($ret)){
     echo $ret."\n";
 }
@@ -41,5 +43,5 @@ function writeLog($msg, $open = false) {
         $fp = fopen( $logPath,'w');
         fclose( $fp );
     }
-    error_log( date('Y-m-d H:i:s', time()) .' | exec sql : ' . $msg.PHP_EOL, 3, $logPath);
+    error_log( date('Y-m-d H:i:s', time()) .' | ' . $msg.PHP_EOL, 3, $logPath);
 }

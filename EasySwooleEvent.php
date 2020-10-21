@@ -17,8 +17,7 @@ class EasySwooleEvent implements Event
     {
         // TODO: Implement initialize() method.
         date_default_timezone_set('Asia/Shanghai');
-        //ORM 的连接注册
-        $config = new \EasySwoole\ORM\Db\Config(Config::getInstance()->getConf('MYSQL'));
+        $config = new \EasySwoole\ORM\Db\Config(Config::getInstance()->getConf('MYSQL'));//ORM 的连接注册
         $config->setMaxObjectNum(20); //配置连接池最大数量
         DbManager::getInstance()->addConnection(new Connection($config));
         Di::getInstance()->set(SysConst::HTTP_EXCEPTION_HANDLER,[ExceptionHandler::class,'handle']);
@@ -30,10 +29,9 @@ class EasySwooleEvent implements Event
         $register->add($register::onWorkerStart, function () { //链接预热
             DbManager::getInstance()->getConnection()->getClientPool()->keepMin();
             DbManager::getInstance()->onQuery(function ($res, $builder, $start) {
-                //写入日志
                 $sql = $builder->getLastQuery();
                 $time = bcsub(time(), $start, 3);
-                writeLog('执行时长'.$time.'s' .$sql);
+                writeLog('执行时长'.$time.' s ' . $sql); //写入日志
             });
         });
     }
