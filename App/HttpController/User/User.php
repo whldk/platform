@@ -28,7 +28,7 @@ class User extends BaseController
         $list = $model->all($where);
         $result = $model->lastQueryResult();
         $total = $result->getTotalCount();
-        $res = [$list, $result, $total];
+        $res = ['_list' => $list, 'total' => $total];
         return $this->writeJson(Status::CODE_OK, $res, '获取用户列表');
     }
 
