@@ -29,6 +29,14 @@ class EasySwooleEvent implements Event
         // TODO: Implement mainServerCreate() method.
         $register->add($register::onWorkerStart, function () { //链接预热
             DbManager::getInstance()->getConnection()->getClientPool()->keepMin();
+            DbManager::getInstance()->onQuery(function ($res, $builder, $start) {
+                // 打印参数 OR 写入日志
+                var_dump($res, $builder, $start);
+//                $queryTime = 1;
+//                if (bcsub(time(), $start, 3) > $queryTime) {
+//                    // 写入日志
+//                }
+            });
         });
     }
 
