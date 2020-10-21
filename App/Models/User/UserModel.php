@@ -5,7 +5,9 @@ use EasySwoole\ORM\AbstractModel;
 class UserModel extends AbstractModel
 {
     protected $tableName = 'user';
-    
+
+    public $primaryKey = '_id';
+
     protected $autoTimeStamp = true;
     protected $createTime = 'created_at';
     protected $updateTime = 'updated_at';
