@@ -2,12 +2,11 @@
 
 class Validators
 {
-    public static function requireValidate($filter, $val, $allowedEmpties = [])
+    public function requireValidate($filter, $val, $allowedEmpties = [])
     {
         $filter = (array)$filter;
 
         foreach ($filter as $key => $field) {
-
             if ($key == 'msg') {
                 continue;
             }
