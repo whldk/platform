@@ -26,10 +26,9 @@ class User extends BaseController
 
     public function create()
     {
-        $valid = UserRules::check($this->params);
+        $valid = UserRules::make($this->params)->atScene('create')->validate([], false);
         if ($valid->isFail()) {
-            var_dump($valid->getErrors());
-            var_dump($valid->firstError());
+            return $this->writeJson(Status::CODE_BAD_REQUEST,$valid->getErrors(), '创建用户');
         }
         // 验证成功 ...
         $safeData = $valid->getSafeData(); // 验证通过的安全数据
@@ -49,11 +48,11 @@ class User extends BaseController
 
     public function view()
     {
-        $valid = Validation::make($this->params, ['id', 'required', 'msg' => ['id' => '用户ID必填']]);
+        $valid = UserRules::make($this->params)->atScene('view')->validate([], false);
         if ($valid->isFail()) {
             return $this->writeJson(Status::CODE_BAD_REQUEST,$valid->getErrors());
         }
-        $res = UserModel::create()->get(['id', $this->params['id']]);
-        return $this->writeJson(Status::CODE_OK, $res);
+        $res = UserModel::create()->get(['id', $this->params['id']]) ?: [];
+        return $this->writeJson(Status::CODE_OK, $res, '查看用户');
     }
 }
