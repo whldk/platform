@@ -7,6 +7,9 @@ defined('IN_PHAR') or define('IN_PHAR', boolval(\Phar::running(false)));
 defined('RUNNING_ROOT') or define('RUNNING_ROOT', realpath(getcwd()));
 defined('EASYSWOOLE_ROOT') or define('EASYSWOOLE_ROOT', IN_PHAR ? \Phar::running() : realpath(getcwd()));
 
+#是否开启日志
+define('DEBUG_LOG', true);
+
 $file = EASYSWOOLE_ROOT.'/vendor/autoload.php';
 if (file_exists($file)) {
     require $file;
@@ -25,4 +28,17 @@ array_shift($args);
 $ret = CommandRunner::getInstance()->run($args);
 if(!empty($ret)){
     echo $ret."\n";
+}
+
+function writeLog($msg, $open = false) {
+    //开启日记
+    if ($open === DEBUG_LOG) {
+        return ;
+    }
+    $logPath =  EASYSWOOLE_ROOT . '/Log/' . date('Y-m-d').'.log';
+    if( !file_exists($logPath) ) {
+        $fp = fopen( $logPath,'w');
+        fclose( $fp );
+    }
+    error_log( date('Y-m-d H:i:s', time()) .' | exec sql : ' . $msg.PHP_EOL, 3, $logPath);
 }
