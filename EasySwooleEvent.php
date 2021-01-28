@@ -17,9 +17,9 @@ class EasySwooleEvent implements Event
 
         # 配置数据库连接
         $config = new Config();
-        $config->setDatabase('platfoem');
+        $config->setDatabase('platform');
         $config->setUser('root');
-        $config->setPassword('127.0.0.1');
+        $config->setPassword('123456');
         $config->setHost('127.0.0.1');
         $config->setPort('3306');
         $config->setCharset('utf8');

@@ -2,6 +2,7 @@
 namespace App\HttpModel\User;
 
 use EasySwoole\ORM\AbstractModel;
+use Swoole\Table;
 
 class UserModel extends AbstractModel
 {
@@ -22,4 +23,15 @@ class UserModel extends AbstractModel
         'update_at' => 'timestamp'
     ];
 
+    public function schemaInfo(bool $isCache = true): Table
+    {
+        $table = new Table($this->tableName);
+        $table->colInt('id')->setIsPrimaryKey(true);
+        $table->colChar('username', 255);
+        $table->colChar('password', 255);
+        $table->colChar('real_name', 255);
+        $table->colInt('create_at');
+        $table->colInt('update_at');
+        return $table;
+    }
 }

@@ -36,8 +36,7 @@ class User extends Controller
 
     public function create()
     {
-        $model = new UserModel();
-        $model::create([
+        $model = UserModel::create([
             'username' => 'whldk',
             'password' => md5('123456'),
             'real_name' => 'whldk'
