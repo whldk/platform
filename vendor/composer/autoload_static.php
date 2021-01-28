@@ -26,8 +26,10 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
         ),
         'E' => 
         array (
+            'EasySwoole\\WeChat\\' => 18,
             'EasySwoole\\Validate\\' => 20,
             'EasySwoole\\Utility\\' => 19,
+            'EasySwoole\\UEditor\\' => 19,
             'EasySwoole\\Trigger\\' => 19,
             'EasySwoole\\Task\\' => 16,
             'EasySwoole\\Spl\\Test\\' => 20,
@@ -35,14 +37,27 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
             'EasySwoole\\Socket\\' => 18,
             'EasySwoole\\Session\\Test\\' => 24,
             'EasySwoole\\Session\\' => 19,
+            'EasySwoole\\Redis\\' => 17,
+            'EasySwoole\\RedisPool\\' => 21,
+            'EasySwoole\\Queue\\' => 17,
+            'EasySwoole\\Pool\\Tests\\' => 22,
+            'EasySwoole\\Pool\\' => 16,
+            'EasySwoole\\Pay\\' => 15,
             'EasySwoole\\ParserDown\\' => 22,
+            'EasySwoole\\ORM\\' => 15,
+            'EasySwoole\\Mysqli\\Tests\\' => 24,
+            'EasySwoole\\Mysqli\\' => 18,
             'EasySwoole\\Log\\' => 15,
             'EasySwoole\\Http\\Tests\\' => 22,
             'EasySwoole\\Http\\' => 16,
+            'EasySwoole\\HttpClient\\Test\\' => 27,
+            'EasySwoole\\HttpClient\\' => 22,
             'EasySwoole\\HttpAnnotation\\' => 26,
             'EasySwoole\\EasySwoole\\' => 22,
             'EasySwoole\\DoctrineAnnotation\\Tests\\' => 36,
             'EasySwoole\\DoctrineAnnotation\\' => 30,
+            'EasySwoole\\DDL\\Test\\' => 20,
+            'EasySwoole\\DDL\\' => 15,
             'EasySwoole\\Config\\Test\\' => 23,
             'EasySwoole\\Config\\' => 18,
             'EasySwoole\\Component\\Tests\\' => 27,
@@ -78,6 +93,10 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
+        'EasySwoole\\WeChat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/wechat/src',
+        ),
         'EasySwoole\\Validate\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/validate/src',
@@ -85,6 +104,10 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
         'EasySwoole\\Utility\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/utility/src',
+        ),
+        'EasySwoole\\UEditor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/u-editor/src',
         ),
         'EasySwoole\\Trigger\\' => 
         array (
@@ -114,9 +137,45 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
         array (
             0 => __DIR__ . '/..' . '/easyswoole/session/src',
         ),
+        'EasySwoole\\Redis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/redis/src',
+        ),
+        'EasySwoole\\RedisPool\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/redis-pool/src',
+        ),
+        'EasySwoole\\Queue\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/queue/src',
+        ),
+        'EasySwoole\\Pool\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/pool/tests',
+        ),
+        'EasySwoole\\Pool\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/pool/src',
+        ),
+        'EasySwoole\\Pay\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/pay/src',
+        ),
         'EasySwoole\\ParserDown\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/parsedown/src',
+        ),
+        'EasySwoole\\ORM\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/orm/src',
+        ),
+        'EasySwoole\\Mysqli\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/mysqli/tests',
+        ),
+        'EasySwoole\\Mysqli\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/mysqli/src',
         ),
         'EasySwoole\\Log\\' => 
         array (
@@ -129,6 +188,14 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
         'EasySwoole\\Http\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/http/src',
+        ),
+        'EasySwoole\\HttpClient\\Test\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/http-client/tests',
+        ),
+        'EasySwoole\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/http-client/src',
         ),
         'EasySwoole\\HttpAnnotation\\' => 
         array (
@@ -145,6 +212,14 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
         'EasySwoole\\DoctrineAnnotation\\' => 
         array (
             0 => __DIR__ . '/..' . '/easyswoole/doctrine-annotations/src',
+        ),
+        'EasySwoole\\DDL\\Test\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/ddl/test',
+        ),
+        'EasySwoole\\DDL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easyswoole/ddl/src',
         ),
         'EasySwoole\\Config\\Test\\' => 
         array (
@@ -186,6 +261,7 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
         array (
             0 => __DIR__ . '/../..' . '/App',
             1 => __DIR__ . '/..' . '/easyswoole/easyswoole/App',
+            2 => __DIR__ . '/..' . '/easyswoole/u-editor/App',
         ),
     );
 

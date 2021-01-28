@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '2ab9abe97824f6c91665cd1eaed34311c2a3c165',
+    'reference' => '3260690f9c6542f5adf97077b6da03c3f94c41c4',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '2ab9abe97824f6c91665cd1eaed34311c2a3c165',
+      'reference' => '3260690f9c6542f5adf97077b6da03c3f94c41c4',
     ),
     'doctrine/lexer' => 
     array (
@@ -107,6 +107,15 @@ private static $installed = array (
       ),
       'reference' => '16c60dc31da7c6558c02f394d149ace2ad47453d',
     ),
+    'easyswoole/ddl' => 
+    array (
+      'pretty_version' => '1.0.9',
+      'version' => '1.0.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'efbe448b0befeb1348d37d9cbd841b5975754950',
+    ),
     'easyswoole/doctrine-annotations' => 
     array (
       'pretty_version' => '1.0.1',
@@ -143,6 +152,15 @@ private static $installed = array (
       ),
       'reference' => '25628163a06b81affb458696216356ee62305dc2',
     ),
+    'easyswoole/http-client' => 
+    array (
+      'pretty_version' => '1.4.4',
+      'version' => '1.4.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c4ec311e7ebc5b06968b4e7fade9e87be6a8718c',
+    ),
     'easyswoole/log' => 
     array (
       'pretty_version' => '1.0.6',
@@ -152,6 +170,24 @@ private static $installed = array (
       ),
       'reference' => '06d735e64063197d46a5fec93766828e47c40542',
     ),
+    'easyswoole/mysqli' => 
+    array (
+      'pretty_version' => '2.2.8',
+      'version' => '2.2.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5c31dd1f7bb0e794b22df7ea117838d0ae46b1ba',
+    ),
+    'easyswoole/orm' => 
+    array (
+      'pretty_version' => '1.4.32',
+      'version' => '1.4.32.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ff33acc6cc14227640705e6aa2931cf8896349ef',
+    ),
     'easyswoole/parsedown' => 
     array (
       'pretty_version' => '1.0.2',
@@ -160,6 +196,51 @@ private static $installed = array (
       array (
       ),
       'reference' => 'ec25cae8a6196016b643315b9c0dbda01716c4f7',
+    ),
+    'easyswoole/pay' => 
+    array (
+      'pretty_version' => '1.2.18',
+      'version' => '1.2.18.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a9ac1092e7e6e42a6beaafe33bd3a1ac634b3e5d',
+    ),
+    'easyswoole/pool' => 
+    array (
+      'pretty_version' => '1.0.13',
+      'version' => '1.0.13.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b65b7fa63e69ef8adcc60fa0736b06fa76f376b2',
+    ),
+    'easyswoole/queue' => 
+    array (
+      'pretty_version' => '2.1.0',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f2046d61064c53caf47d4705935c24e83bef7b5b',
+    ),
+    'easyswoole/redis' => 
+    array (
+      'pretty_version' => '1.3.7',
+      'version' => '1.3.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6737732d29c9bf4840ee6d9f1548f019e2f86ba7',
+    ),
+    'easyswoole/redis-pool' => 
+    array (
+      'pretty_version' => '2.2.1',
+      'version' => '2.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '223f3bafe2d7013d1f38b6d5a84509a0b74fc4b0',
     ),
     'easyswoole/session' => 
     array (
@@ -206,6 +287,15 @@ private static $installed = array (
       ),
       'reference' => 'f449f974d6645342134f455ce4a6885c8ad3a92e',
     ),
+    'easyswoole/u-editor' => 
+    array (
+      'pretty_version' => '1.0.4',
+      'version' => '1.0.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e725b12e26bccc3c6aae1b89d02c1b59d205abe4',
+    ),
     'easyswoole/utility' => 
     array (
       'pretty_version' => '1.2.2',
@@ -223,6 +313,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '049e8088a40310280048fa87b23c254b0b2f2586',
+    ),
+    'easyswoole/wechat' => 
+    array (
+      'pretty_version' => 'v1.2.3',
+      'version' => '1.2.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dac28e630b7a8e605e09fedbe8b3c547a82068fc',
     ),
     'nikic/fast-route' => 
     array (
