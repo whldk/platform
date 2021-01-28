@@ -28,9 +28,10 @@ class User extends Controller
         // 获取get参数
         $id = $this->request()->getQueryParam('id');
         // 输出到终端
-        var_dump($id);
         // 返回给客户端
-        $this->response()->write($id.PHP_EOL);
+        $res = UserModel::create()->get($id);
+        var_dump($res);
+        $this->response()->write($res);
     }
 
     public function create()
