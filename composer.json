@@ -11,7 +11,10 @@
         "easyswoole/redis": "^1.3",
         "easyswoole/u-editor": "^1.0",
         "easyswoole/task": "^1.1",
-        "easyswoole/session": "2.x"
+        "easyswoole/session": "2.x",
+        "ritaswc/zx-ip-address": "^2.0",
+        "viest/php-ext-xlswriter-ide-helper": "dev-master",
+        "swoole/ide-helper": "^4.6"
     },
     "autoload": {
         "psr-4": {

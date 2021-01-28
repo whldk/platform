@@ -12,6 +12,14 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
     );
 
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Vtiful\\Kernel\\' => 14,
+        ),
+        'R' => 
+        array (
+            'Ritaswc\\ZxIPAddress\\' => 20,
+        ),
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
@@ -81,6 +89,14 @@ class ComposerStaticInita3be4a9368889eb82da3fad3b1bf92b6
     );
 
     public static $prefixDirsPsr4 = array (
+        'Vtiful\\Kernel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/viest/php-ext-xlswriter-ide-helper/src',
+        ),
+        'Ritaswc\\ZxIPAddress\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ritaswc/zx-ip-address/src/ZxIPAddress',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',

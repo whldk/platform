@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Vtiful\\Kernel\\' => array($vendorDir . '/viest/php-ext-xlswriter-ide-helper/src'),
+    'Ritaswc\\ZxIPAddress\\' => array($vendorDir . '/ritaswc/zx-ip-address/src/ZxIPAddress'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'Opis\\Closure\\' => array($vendorDir . '/opis/closure/src'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),

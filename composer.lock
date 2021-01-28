@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe4f686d42a156e6e25b9d8f48915c9b",
+    "content-hash": "28ab3c59ac80e76aff549b7f28e0cce3",
     "packages": [
         {
             "name": "doctrine/lexer",
@@ -1824,12 +1824,139 @@
                 "source": "https://github.com/php-fig/http-message/tree/master"
             },
             "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "ritaswc/zx-ip-address",
+            "version": "2.0.35",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ritaswc/zx-ip-address.git",
+                "reference": "ee00bfa9873e12435b155feb1e4225e328bbf9f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ritaswc/zx-ip-address/zipball/ee00bfa9873e12435b155feb1e4225e328bbf9f8",
+                "reference": "ee00bfa9873e12435b155feb1e4225e328bbf9f8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ritaswc\\ZxIPAddress\\": "src/ZxIPAddress"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Charles",
+                    "email": "ritaswc@163.com"
+                }
+            ],
+            "description": "IPv4/IPv6 offline address database.IPv4/IPv6双栈地址离线数据库。IPv4 by 纯真网络，IPv6 by ZX Inc.",
+            "support": {
+                "issues": "https://github.com/ritaswc/zx-ip-address/issues",
+                "source": "https://github.com/ritaswc/zx-ip-address/tree/2.0.35"
+            },
+            "funding": [
+                {
+                    "url": "https://blog.yinghualuo.cn/blog/2020/11/sponsor.png",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-01-27T14:27:11+00:00"
+        },
+        {
+            "name": "swoole/ide-helper",
+            "version": "4.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swoole/ide-helper.git",
+                "reference": "62d923e3406d4d9c5a4749d810d11e2beb201abe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swoole/ide-helper/zipball/62d923e3406d4d9c5a4749d810d11e2beb201abe",
+                "reference": "62d923e3406d4d9c5a4749d810d11e2beb201abe",
+                "shasum": ""
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "~6.5.0",
+                "laminas/laminas-code": "~3.4.0",
+                "squizlabs/php_codesniffer": "~3.5.0",
+                "symfony/filesystem": "~4.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Team Swoole",
+                    "email": "team@swoole.com"
+                }
+            ],
+            "description": "IDE help files for Swoole.",
+            "support": {
+                "issues": "https://github.com/swoole/ide-helper/issues",
+                "source": "https://github.com/swoole/ide-helper/tree/4.6.2"
+            },
+            "time": "2021-01-26T00:17:29+00:00"
+        },
+        {
+            "name": "viest/php-ext-xlswriter-ide-helper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/viest/php-ext-xlswriter-ide-helper.git",
+                "reference": "e617f5b911e7224e8cce16d7891ad3baa8408c0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/viest/php-ext-xlswriter-ide-helper/zipball/e617f5b911e7224e8cce16d7891ad3baa8408c0c",
+                "reference": "e617f5b911e7224e8cce16d7891ad3baa8408c0c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Vtiful\\Kernel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "viest",
+                    "email": "wjx@php.net"
+                }
+            ],
+            "description": "PHP Extension Xlswriter IDE Helper",
+            "support": {
+                "issues": "https://github.com/viest/php-ext-xlswriter-ide-helper/issues",
+                "source": "https://github.com/viest/php-ext-xlswriter-ide-helper/tree/master"
+            },
+            "time": "2020-12-31T14:54:09+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "viest/php-ext-xlswriter-ide-helper": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

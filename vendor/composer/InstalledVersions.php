@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '3260690f9c6542f5adf97077b6da03c3f94c41c4',
+    'reference' => '9bdd2840afb9a555c06580208536b2a3958bfc7f',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '3260690f9c6542f5adf97077b6da03c3f94c41c4',
+      'reference' => '9bdd2840afb9a555c06580208536b2a3958bfc7f',
     ),
     'doctrine/lexer' => 
     array (
@@ -349,6 +349,34 @@ private static $installed = array (
       array (
       ),
       'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
+    ),
+    'ritaswc/zx-ip-address' => 
+    array (
+      'pretty_version' => '2.0.35',
+      'version' => '2.0.35.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ee00bfa9873e12435b155feb1e4225e328bbf9f8',
+    ),
+    'swoole/ide-helper' => 
+    array (
+      'pretty_version' => '4.6.2',
+      'version' => '4.6.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '62d923e3406d4d9c5a4749d810d11e2beb201abe',
+    ),
+    'viest/php-ext-xlswriter-ide-helper' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => 'e617f5b911e7224e8cce16d7891ad3baa8408c0c',
     ),
   ),
 );
