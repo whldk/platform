@@ -19,5 +19,6 @@ return [
         ]
     ],
     'TEMP_DIR' => null,
-    'LOG_DIR' => null
+    'LOG_DIR' => null,
+    'COOKIE_NAME' => 'platform'
 ];
