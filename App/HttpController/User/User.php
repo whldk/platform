@@ -26,8 +26,7 @@ class User extends BaseController
         // 输出到终端
         // 返回给客户端
         $res = UserModel::create()->get($id);
-        var_dump($res);
-        $this->response()->write($res);
+        $this->seed($res, 201);
     }
 
     public function create()

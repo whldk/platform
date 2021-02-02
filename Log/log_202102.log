@@ -1,0 +1,42 @@
+[2021-02-01 11:52:38][debug][error]:[Argument 1 passed to EasySwoole\Http\Response::write() must be of the type string, null given, called in /var/www/html/platform/App/HttpController/User/User.php on line 34 at file:/var/www/html/platform/vendor/easyswoole/http/src/Response.php line:76]
+[2021-02-01 11:53:06][debug][error]:[Argument 1 passed to EasySwoole\Http\Response::write() must be of the type string, null given, called in /var/www/html/platform/App/HttpController/User/User.php on line 34 at file:/var/www/html/platform/vendor/easyswoole/http/src/Response.php line:76]
+[2021-02-01 11:58:34][debug][error]:[Too few arguments to function EasySwoole\Http\Message\ServerRequest::getUploadedFile(), 0 passed in /var/www/html/platform/App/HttpController/BaseController.php on line 44 and exactly 1 expected at file:/var/www/html/platform/vendor/easyswoole/http/src/Message/ServerRequest.php line:81]
+[2021-02-01 11:58:43][debug][error]:[Too few arguments to function EasySwoole\Http\Message\ServerRequest::getUploadedFile(), 0 passed in /var/www/html/platform/App/HttpController/BaseController.php on line 44 and exactly 1 expected at file:/var/www/html/platform/vendor/easyswoole/http/src/Message/ServerRequest.php line:81]
+[2021-02-01 11:59:45][debug][error]:[Unsupported operand types at file:/var/www/html/platform/App/HttpController/BaseController.php line:48]
+[2021-02-01 16:46:39][debug][error]:[Unsupported operand types at file:/var/www/html/platform/App/HttpController/BaseController.php line:48]
+[2021-02-01 17:10:28][debug][error]:[Uncaught Error: Class 'EasySwoole\EasySwoole\SessionFileHandler' not found in /var/www/html/platform/EasySwooleEvent.php:65
+Stack trace:
+#0 /var/www/html/platform/vendor/easyswoole/easyswoole/src/Core.php(109): EasySwoole\EasySwoole\EasySwooleEvent::mainServerCreate(Object(EasySwoole\EasySwoole\Swoole\EventRegister))
+#1 /var/www/html/platform/vendor/easyswoole/easyswoole/src/Command/DefaultCommand/Server.php(114): EasySwoole\EasySwoole\Core->createServer()
+#2 /var/www/html/platform/vendor/easyswoole/easyswoole/src/Command/DefaultCommand/Server.php(54): EasySwoole\EasySwoole\Command\DefaultCommand\Server->start()
+#3 /var/www/html/platform/vendor/easyswoole/command/src/CommandManager.php(101): EasySwoole\EasySwoole\Command\DefaultCommand\Server->exec()
+#4 /var/www/html/platform/vendor/easyswoole/easyswoole/src/Command/CommandRunner.php(53): EasySwoole\Command\CommandManager->run(Object(EasySwoole\Command\Caller))
+#5 /var/www/html/platform/vendor/easyswoole/easyswoole/bin/easyswoole(32): EasySwoole\EasySwoole\Co at file:/var/www/html/platform/EasySwooleEvent.php line:65]
+[2021-02-01 17:11:01][debug][error]:[Argument 1 passed to EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}() must be an instance of EasySwoole\EasySwoole\Request, instance of EasySwoole\Http\Request given at file:/var/www/html/platform/EasySwooleEvent.php line:40]
+[2021-02-01 17:11:32][debug][error]:[Argument 1 passed to EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}() must be an instance of EasySwoole\EasySwoole\Request, instance of EasySwoole\Http\Request given at file:/var/www/html/platform/EasySwooleEvent.php line:40]
+[2021-02-01 17:11:47][debug][error]:[Argument 1 passed to EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}() must be an instance of EasySwoole\EasySwoole\Request, instance of EasySwoole\Http\Request given at file:/var/www/html/platform/EasySwooleEvent.php line:40]
+[2021-02-01 17:11:48][debug][error]:[Argument 1 passed to EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}() must be an instance of EasySwoole\EasySwoole\Request, instance of EasySwoole\Http\Request given at file:/var/www/html/platform/EasySwooleEvent.php line:40]
+[2021-02-01 17:35:05][debug][error]:[Uncaught Error: Call to undefined method EasySwoole\Mysqli\Client::getLastQuery() in /var/www/html/platform/EasySwooleEvent.php:74
+Stack trace:
+#0 {main}
+  thrown at file:/var/www/html/platform/EasySwooleEvent.php line:74]
+[2021-02-01 17:56:59][debug][error]:[Uncaught Error: Using $this when not in object context in /var/www/html/platform/EasySwooleEvent.php:82
+Stack trace:
+#0 {main}
+  thrown at file:/var/www/html/platform/EasySwooleEvent.php line:82]
+[2021-02-01 17:57:27][debug][error]:[Uncaught Error: Call to undefined method EasySwoole\Http\Response::writeJson() in /var/www/html/platform/EasySwooleEvent.php:82
+Stack trace:
+#0 {main}
+  thrown at file:/var/www/html/platform/EasySwooleEvent.php line:82]
+[2021-02-01 18:13:47][debug][error]:[Call to undefined method App\HttpController\User\User::checkSession() at file:/var/www/html/platform/App/HttpController/BaseController.php line:40]
+[2021-02-01 18:15:51][debug][error]:[Too few arguments to function App\HttpController\BaseController::access(), 0 passed in /var/www/html/platform/App/HttpController/BaseController.php on line 36 and exactly 1 expected at file:/var/www/html/platform/App/HttpController/BaseController.php line:61]
+[2021-02-01 18:16:14][debug][error]:[Uncaught EasySwoole\Mysqli\Exception\Exception: SQLSTATE[23000] [1062] Duplicate entry 'nb5fqu210amicrzna9l7g6jpzjdokge8' for key 'session.PRIMARY' in /var/www/html/platform/vendor/easyswoole/mysqli/src/Client.php:69
+Stack trace:
+#0 /var/www/html/platform/App/HttpController/BaseController.php(139): EasySwoole\Mysqli\Client->execBuilder()
+#1 {main}
+  thrown at file:/var/www/html/platform/vendor/easyswoole/mysqli/src/Client.php line:69]
+[2021-02-01 18:16:55][debug][error]:[Uncaught EasySwoole\Mysqli\Exception\Exception: SQLSTATE[23000] [1062] Duplicate entry 'nb5fqu210amicrzna9l7g6jpzjdokge8' for key 'session.PRIMARY' in /var/www/html/platform/vendor/easyswoole/mysqli/src/Client.php:69
+Stack trace:
+#0 /var/www/html/platform/App/HttpController/BaseController.php(140): EasySwoole\Mysqli\Client->execBuilder()
+#1 {main}
+  thrown at file:/var/www/html/platform/vendor/easyswoole/mysqli/src/Client.php line:69]

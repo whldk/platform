@@ -1,13 +1,17 @@
 <?php
-
-
 namespace EasySwoole\EasySwoole;
 
+use EasySwoole\Component\Di;
 use EasySwoole\EasySwoole\AbstractInterface\Event;
 use EasySwoole\EasySwoole\Swoole\EventRegister;
 use EasySwoole\ORM\Db\Connection;
 use EasySwoole\ORM\DbManager;
 use EasySwoole\ORM\Db\Config;
+use EasySwoole\Session\Session;
+use EasySwoole\Session\SessionFileHandler;
+use EasySwoole\Http\Request;
+use EasySwoole\Http\Response;
+use EasySwoole\Mysqli\QueryBuilder;
 
 class EasySwooleEvent implements Event
 {
@@ -33,6 +37,22 @@ class EasySwooleEvent implements Event
         $config->setMaxObjectNum(20); //设置最大连接池存在连接对象数量
         $config->setAutoPing(5); //设置自动ping客户端链接的间隔
         DbManager::getInstance()->addConnection(new Connection($config));
+
+        Di::getInstance()->set(\EasySwoole\EasySwoole\SysConst::HTTP_GLOBAL_ON_REQUEST, function (Request $request, Response $response): bool {
+            // TODO: 注册 HTTP_GLOBAL_ON_REQUEST 回调，相当于原来的 onRequest 事件
+            $cookie = $request->getCookieParams('platform');
+            if (empty($cookie)) {
+                $sid = Session::getInstance()->sessionId();
+                $response->setCookie('platform', $sid);
+            } else {
+                Session::getInstance()->sessionId($cookie);
+            }
+            return true;
+        });
+
+        Di::getInstance()->set(\EasySwoole\EasySwoole\SysConst::HTTP_GLOBAL_AFTER_REQUEST, function (Request $request, Response $response): void {
+            // TODO: 注册 HTTP_GLOBAL_AFTER_REQUEST 回调，相当于原来的 afterRequest 事件
+        });
     }
 
     public static function mainServerCreate(EventRegister $register)
@@ -41,5 +61,9 @@ class EasySwooleEvent implements Event
             // 链接预热
             DbManager::getInstance()->getConnection()->__getClientPool()->keepMin();
         });
+
+        // 可以自己实现一个标准的session handler
+        $handler = new SessionFileHandler(EASYSWOOLE_TEMP_DIR);
+        Session::getInstance($handler, 'platform', 'session_dir');
     }
 }

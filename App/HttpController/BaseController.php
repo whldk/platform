@@ -41,14 +41,15 @@ class BaseController extends Controller
         $request = $this->request();
         $this->params = $request->getRequestParam();
         $this->params += $request->getQueryParams();
-        $this->params += $request->getUploadedFile();
+        $this->params += $request->getUploadedFiles();
         $this->params += $request->getQueryParams();
         $this->params += $request->getParsedBody();
         $content = $request->getBody()->__toString();
-        $this->params += json_decode($content, true);
+        //$this->params +=  $content ? json_decode($content, true) : [];
         $this->header = $request->getHeaders();
         $this->cookie = $request->getCookieParams();
 
+        //var_dump($this->params, $this->cookie);
         return true;
      }
 
@@ -65,18 +66,20 @@ class BaseController extends Controller
             return false;
         }
 
+        //获取cookie 查看用户身份权限
+        $instance = Config::getInstance();
+        $cookie = $this->request()->getCookieParams($instance->getConf('COOKIE_NAME'));
+        $this->checkSession($cookie);
+
         if (in_array('*', $access, true)) {
             return true;
         }
 
-        //获取cookie 查看用户身份权限
-        $instance = Config::getInstance();
-        $cookie = $this->request()->getCookieParams($instance->getConf('COOKIE_NAME'));
-
+        //var_dump($cookie);
         $role = $cookie ? $cookie : '?';
 
         if ($role !== '?') {
-            var_dump($role);
+            //var_dump($role);
         }
 
         if ($role == '?') {
@@ -97,5 +100,52 @@ class BaseController extends Controller
     public function params()
     {
         return $this->params;
+    }
+
+    public function seed($res, $statusCode)
+    {
+        $this->response()->withHeader('Content-type','application/json;charset=utf-8');
+        $this->response()->withStatus($statusCode);
+        $this->response()->write($res);
+    }
+
+    public function checkSession($sid)
+    {
+        $config = new \EasySwoole\Mysqli\Config([
+            'host'          => '127.0.0.1',
+            'port'          => 3306,
+            'user'          => 'root',
+            'password'      => '123456',
+            'database'      => 'platform',
+            'timeout'       => 5,
+            'charset'       => 'utf8mb4',
+        ]);
+        $client = new \EasySwoole\Mysqli\Client($config);
+        //查询sid
+        $client->queryBuilder()->where('id', $sid)->get('session');
+        $res = $client->execBuilder();
+        $res = $res ? $res[0] : null;
+        if ($res !== null) {
+            //过期时间接近5分钟内,则更新
+            if ($res['expire'] < time() + 60 * 5) {
+                //更新时长
+                $client->queryBuilder()->where('expire', time() + 7200)->update('updateTable', ['id' => $sid]);
+                $client->execBuilder();
+            }
+        } else {
+            //不存在则插入
+            $client->queryBuilder()->insert('session', ['id' => $sid, 'expire' => time() + 7200]);
+            $client->execBuilder();
+        }
+
+        //自动删除过期的session
+        $client->queryBuilder()->where('expire', time(), '<=')->delete('session');
+        $client->execBuilder();
+        //echo $client->queryBuilder()->getLastQuery();
+
+        $client->queryBuilder()->where('id', $sid)->get('session');
+        $res = $client->execBuilder();
+
+        var_dump($res);
     }
 }
