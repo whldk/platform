@@ -12,13 +12,13 @@ class Site extends BaseController
         $this->response()->write('site index');
     }
 
-
     public function login()
     {
         $param = $this->request()->getRequestParam();
         $model = new UserModel();
         $model->username = $param['username'];
         $model->password = md5($param['password']);
+        $remember = $param['remember'] ?: 0;
         if ($user = $model->login()) {
             $sessionHash = md5(time() . $user->id);
             $user->update([
@@ -27,10 +27,15 @@ class Site extends BaseController
                 'session'    => $sessionHash
             ]);
             $rs = $user->toArray();
-            unset($rs['password']);
+            unset($rs['password'], $rs['create_at'], $rs['update_at']);
+            $rs['loginTime'] = date('Y-m-d H:i:s', time());
             $rs['session'] = $sessionHash;
-            $this->response()->setCookie($this->sessionKey, $sessionHash, time() + 3600, '/');
-            $this->writeJson(Status::OK, $rs);
+            if ($remember) {
+                $this->response()->setCookie($this->sessionKey, $sessionHash, time() + 86400, '/');
+            } else {
+                $this->response()->setCookie($this->sessionKey, $sessionHash, time() + 100, '/');
+            }
+            $this->writeJson(Status::OK, $rs, 'success');
         } else {
             $this->writeJson(Status::BAD_REQUEST, '', '密码错误');
         }

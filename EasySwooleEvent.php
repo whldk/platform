@@ -36,7 +36,7 @@ class EasySwooleEvent implements Event
             $cookie = $request->getCookieParams('platform');
             if (empty($cookie)) {
                 $sid = Session::getInstance()->sessionId();
-                $response->setCookie('easy_session', $sid);
+                $response->setCookie('platform', $sid);
             } else {
                 Session::getInstance()->sessionId($cookie);
             }
@@ -56,8 +56,8 @@ class EasySwooleEvent implements Event
             DbManager::getInstance()->getConnection()->__getClientPool()->keepMin();
         });
         // 可以自己实现一个标准的session handler
-        //$handler = new SessionFileHandler(EASYSWOOLE_TEMP_DIR);
+        $handler = new SessionFileHandler(EASYSWOOLE_TEMP_DIR);
         // 表示cookie name   还有 save path
-        //Session::getInstance($handler, 'easy_session', 'session_dir');
+        Session::getInstance($handler, 'platform', 'session_dir');
     }
 }

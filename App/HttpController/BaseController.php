@@ -1,6 +1,7 @@
 <?php namespace App\HttpController;
 
 use App\HttpModel\User\UserModel;
+use EasySwoole\EasySwoole\ServerManager;
 use EasySwoole\Http\AbstractInterface\Controller;
 use EasySwoole\Http\Message\Status;
 

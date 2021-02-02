@@ -40,3 +40,7 @@ Stack trace:
 #0 /var/www/html/platform/App/HttpController/BaseController.php(140): EasySwoole\Mysqli\Client->execBuilder()
 #1 {main}
   thrown at file:/var/www/html/platform/vendor/easyswoole/mysqli/src/Client.php line:69]
+[2021-02-02 16:39:10][debug][error]:[Too few arguments to function EasySwoole\Session\Session::__construct(), 0 passed in /var/www/html/platform/vendor/easyswoole/session/src/Session.php on line 40 and at least 1 expected at file:/var/www/html/platform/vendor/easyswoole/session/src/Session.php line:28]
+[2021-02-02 16:40:03][debug][notice]:[Undefined index: username at file:/var/www/html/platform/App/HttpController/Site.php line:20]
+[2021-02-02 16:40:03][debug][notice]:[Undefined index: password at file:/var/www/html/platform/App/HttpController/Site.php line:21]
+[2021-02-02 16:40:55][debug][error]:[Class 'App\HttpController\ServerManager' not found at file:/var/www/html/platform/App/HttpController/BaseController.php line:18]
