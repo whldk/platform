@@ -33,12 +33,9 @@ class BaseController extends Controller
 
     public function beforeRun()
     {
-
-
 //        if (!$this->access()) {
 //            return false;
 //        }
-
         //params 若POST与GET存在同键名参数，则以GET为准
         $request = $this->request();
         $this->params = $request->getRequestParam();
@@ -50,7 +47,6 @@ class BaseController extends Controller
         //$this->params +=  $content ? json_decode($content, true) : [];
         $this->header = $request->getHeaders();
         $this->cookie = $request->getCookieParams();
-
         var_dump($this->params, $this->cookie);
         return true;
      }
@@ -175,7 +171,4 @@ class BaseController extends Controller
         $value = $this->request()->getRequestParam($name);
         return $value ?? $default;
     }
-    
-
-
 }
