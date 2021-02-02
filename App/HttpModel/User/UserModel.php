@@ -21,8 +21,8 @@ class UserModel extends AbstractModel
         'realName' => 'string',
         'session' => 'string',
         'group' => 'int',
-        'create_at' => 'timestamp',
-        'update_at' => 'timestamp'
+        'create_at' => 'int',
+        'update_at' => 'int'
     ];
 
     public function _list(string $userName = null, string $realName = null,  string $group = null, int $page = 1, int $pageSize = 10): array
