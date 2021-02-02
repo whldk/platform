@@ -33,9 +33,11 @@ class BaseController extends Controller
 
     public function beforeRun()
     {
-        if (!$this->access()) {
-            return false;
-        }
+
+
+//        if (!$this->access()) {
+//            return false;
+//        }
 
         //params 若POST与GET存在同键名参数，则以GET为准
         $request = $this->request();
@@ -49,7 +51,7 @@ class BaseController extends Controller
         $this->header = $request->getHeaders();
         $this->cookie = $request->getCookieParams();
 
-        //var_dump($this->params, $this->cookie);
+        var_dump($this->params, $this->cookie);
         return true;
      }
 
@@ -111,16 +113,7 @@ class BaseController extends Controller
 
     public function checkSession($sid)
     {
-        $config = new \EasySwoole\Mysqli\Config([
-            'host'          => '127.0.0.1',
-            'port'          => 3306,
-            'user'          => 'root',
-            'password'      => '123456',
-            'database'      => 'platform',
-            'timeout'       => 5,
-            'charset'       => 'utf8mb4',
-        ]);
-        $client = new \EasySwoole\Mysqli\Client($config);
+        $client = new \EasySwoole\Mysqli\Client(Config::getInstance()->getConf('MYSQL'));
         //查询sid
         $client->queryBuilder()->where('id', $sid)->get('session');
         $res = $client->execBuilder();
