@@ -18,22 +18,21 @@ class UserModel extends AbstractModel
         'id' => 'int',
         'username' => 'string',
         'password' => 'string',
-        'real_name' => 'string',
+        'realName' => 'string',
         'session' => 'string',
         'group' => 'int',
         'create_at' => 'timestamp',
         'update_at' => 'timestamp'
     ];
 
-
-    public function _list(int $page = 1, string $userName = null, string $realName = null,  string $group = null, int $pageSize = 10): array
+    public function _list(string $userName = null, string $realName = null,  string $group = null, int $page = 1, int $pageSize = 10): array
     {
         $where = [];
         if (!empty($userName)) {
             $where['username'] = ['%' . $userName . '%', 'like'];
         }
         if (!empty($realName)) {
-            $where['real_name'] = ['%' . $realName . '%', 'like'];
+            $where['realName'] = ['%' . $realName . '%', 'like'];
         }
         if (!empty($group)) {
             $where['group'] = $group;
@@ -48,7 +47,7 @@ class UserModel extends AbstractModel
     */
     public function login():?UserModel
     {
-        $info = $this->get(['username' => $this->username,'real_name' => $this->real_name, 'group' => $this->group]);
+        $info = $this->get(['username' => $this->username, 'password' => $this->password]);
         return $info;
     }
 

@@ -1,30 +1,36 @@
 <?php
 namespace App\HttpController\User;
 
-use App\HttpController\BaseController;
+use App\HttpController\Common\BaseController;
 use App\HttpModel\User\UserModel;
-
 
 class User extends BaseController
 {
 
     public $access = [
-        'userInfo' => ['*'],
-        'create' => ['admin']
+        '*' => ['admin'],
+        'list' => ['*']
     ];
 
-    public function requestTotal()
+    public function list()
     {
-        $this->response()->write('请求数+1'.PHP_EOL);
-        // 还可以return，但不要两个方法互相调用，会死循环
+        $param = $this->request()->getRequestParam();
+        $page = $param['page']??1;
+        $limit = $param['limit']??20;
+        $model = new UserModel();
+        $data = $model->_list(
+            $param['username']??null,
+        $param['real_name']??null,
+        $param['group'] ?? null,
+            $page,
+            $limit);
+        $this->writeJson(Status::CODE_OK, $data, 'success');
     }
 
-    public function userInfo()
+    public function view()
     {
         // 获取get参数
-        $id = $this->request()->getQueryParam('id');
-        // 输出到终端
-        // 返回给客户端
+        $id = $this->params['id'] ?: 1;
         $res = UserModel::create()->get($id);
         $this->seed($res, 201);
     }

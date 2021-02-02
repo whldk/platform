@@ -20,6 +20,7 @@ return [
     ],
     'TEMP_DIR' => null,
     'LOG_DIR' => null,
+    'COOKIE_NAME' => 'platform',
     'MYSQL'  => [
         'host'          => '127.0.0.1',
         'port'          => 3306,

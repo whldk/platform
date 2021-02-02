@@ -33,6 +33,13 @@ class EasySwooleEvent implements Event
 
         // TODO: 注册 HTTP_GLOBAL_ON_REQUEST 回调，相当于原来的 onRequest 事件
         Di::getInstance()->set(\EasySwoole\EasySwoole\SysConst::HTTP_GLOBAL_ON_REQUEST, function (Request $request, Response $response): bool {
+            $cookie = $request->getCookieParams('platform');
+            if (empty($cookie)) {
+                $sid = Session::getInstance()->sessionId();
+                $response->setCookie('easy_session', $sid);
+            } else {
+                Session::getInstance()->sessionId($cookie);
+            }
             return true;
         });
 
@@ -48,5 +55,9 @@ class EasySwooleEvent implements Event
         $register->add($register::onWorkerStart,function (){
             DbManager::getInstance()->getConnection()->__getClientPool()->keepMin();
         });
+        // 可以自己实现一个标准的session handler
+        //$handler = new SessionFileHandler(EASYSWOOLE_TEMP_DIR);
+        // 表示cookie name   还有 save path
+        //Session::getInstance($handler, 'easy_session', 'session_dir');
     }
 }
