@@ -68,15 +68,19 @@ class Site extends BaseController
                 'loginIp'   => $this->clientRealIP(),
                 'session'    => $sessionHash
             ]);
+            if ($remember) {
+                $time = time() + 86400;
+                $this->response()->setCookie($this->sessionKey, $sessionHash, $time, '/');
+            } else {
+                $time = time() + 7200;
+                $this->response()->setCookie($this->sessionKey, $sessionHash, $time, '/');
+            }
+
+            $user->update(['expire' => $time]);
             $rs = $user->toArray();
             unset($rs['password']);
             $rs['loginTime'] = date('Y-m-d H:i:s', time());
             $rs['session'] = $sessionHash;
-            if ($remember) {
-                $this->response()->setCookie($this->sessionKey, $sessionHash, time() + 86400, '/');
-            } else {
-                $this->response()->setCookie($this->sessionKey, $sessionHash, time() + 7200, '/');
-            }
             $this->writeJson(Status::OK, $rs, 'success');
         } else {
             $this->writeJson(Status::BAD_REQUEST, '', '密码错误');

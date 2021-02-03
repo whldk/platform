@@ -1,8 +1,9 @@
 <?php
 namespace App\HttpController\User;
 
-use App\HttpController\Common\BaseController;
+use App\HttpController\BaseController;
 use App\HttpModel\User\UserModel;
+use EasySwoole\Http\Message\Status;
 
 class User extends BaseController
 {
@@ -14,9 +15,8 @@ class User extends BaseController
 
     public function list()
     {
-        $param = $this->request()->getRequestParam();
-        $page = $param['page']??1;
-        $limit = $param['limit']??20;
+        $page = $this->params['page'] ?? 1;
+        $limit = $this->params['pagesize'] ?? 10;
         $model = new UserModel();
         $data = $model->_list(
             $param['username']??null,

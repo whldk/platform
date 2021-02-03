@@ -22,7 +22,8 @@ class UserModel extends AbstractModel
         'session' => 'string',
         'group' => 'int',
         'create_at' => 'int',
-        'update_at' => 'int'
+        'update_at' => 'int',
+        'expire' => 'int'
     ];
 
     public function _list(string $userName = null, string $realName = null,  string $group = null, int $page = 1, int $pageSize = 10): array
@@ -59,7 +60,11 @@ class UserModel extends AbstractModel
 
     public function logout()
     {
-        return $this->update(['session' => '']);
+        return $this->update(['session' => null, 'expire' => null]);
     }
 
+    public function clearSession()
+    {
+
+    }
 }

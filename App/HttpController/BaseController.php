@@ -98,8 +98,10 @@ class BaseController extends Controller
                 return false;
             }
 
+
             //刷新cookie存活
             $this->response()->setCookie($this->sessionKey, $data->session, time() + 7200, '/');
+            $data->expire = time() + 7200;
 
 
             $role = $this->getRole();

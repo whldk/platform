@@ -59,3 +59,8 @@ Stack trace:
 [2021-02-02 18:17:52][debug][error]:[Unsupported operand types at file:/var/www/html/platform/App/HttpController/BaseController.php line:75]
 [2021-02-02 18:18:35][debug][error]:[Unsupported operand types at file:/var/www/html/platform/App/HttpController/BaseController.php line:76]
 [2021-02-02 18:18:36][debug][error]:[Unsupported operand types at file:/var/www/html/platform/App/HttpController/BaseController.php line:76]
+[2021-02-02 18:43:06][debug][warning]:[Creating default object from empty value at file:/var/www/html/platform/App/HttpController/Site.php line:82]
+[2021-02-02 18:44:04][debug][warning]:[Creating default object from empty value at file:/var/www/html/platform/App/HttpController/Site.php line:82]
+[2021-02-03 09:26:15][debug][error]:[Class 'App\HttpController\Common\BaseController' not found at file:/var/www/html/platform/App/HttpController/User/User.php line:7]
+[2021-02-03 09:47:37][debug][error]:[Class 'App\HttpController\Common\BaseController' not found at file:/var/www/html/platform/App/HttpController/User/User.php line:7]
+[2021-02-03 09:48:16][debug][error]:[Class 'App\HttpController\User\Status' not found at file:/var/www/html/platform/App/HttpController/User/User.php line:27]
