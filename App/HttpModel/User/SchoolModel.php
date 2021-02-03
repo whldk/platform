@@ -24,11 +24,14 @@ class SchoolModel extends AbstractModel
         'status' => 'int'
     ];
 
-    public function list(string $name = null, int $page = 1, int $pageSize = 10):array
+    public function list(string $name = null, string $status = null, int $page = 1, int $pageSize = 10):array
     {
         $where = [];
         if (!empty($name)) {
             $where['name'] = ['%' . $name . '%', 'like'];
+        }
+        if (!empty($status)) {
+            $where['status'] = $status;
         }
         $list  = $this->limit($pageSize * ($page - 1), $pageSize)->order($this->primaryKey, 'DESC')->withTotalCount()->all($where);
         $total = $this->lastQueryResult()->getTotalCount();

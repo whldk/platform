@@ -48,7 +48,8 @@ class School extends BaseController
 
     public function category()
     {
-
+        $res = SchoolModel::create()->get(['status' => 1]);
+        $this->writeJson(Status::OK, $res, 'success');
     }
 
     public function list()
@@ -56,8 +57,9 @@ class School extends BaseController
         $page = $this->params['page'] ?? 1;
         $pageSize = $this->params['pagesize'] ?? 10;
         $name = $this->params['name'] ?: null;
+        $status = $this->params['status'] ?: null;
         $model = new SchoolModel();
-        $data = $model->list($name, $page, $pageSize);
+        $data = $model->list($name, $status, $page, $pageSize);
         $this->writeJson(Status::OK, $data, 'success');
     }
 
