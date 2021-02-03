@@ -29,7 +29,9 @@ class EasySwooleEvent implements Event
         $config->setMinObjectNum(5); //设置最小连接池存在连接对象数量
         $config->setMaxObjectNum(20); //设置最大连接池存在连接对象数量
         $config->setAutoPing(5); //设置自动ping客户端链接的间隔
+        $config->setReturnCollection(true);
         DbManager::getInstance()->addConnection(new Connection($config));
+
 
         // TODO: 注册 HTTP_GLOBAL_ON_REQUEST 回调，相当于原来的 onRequest 事件
         Di::getInstance()->set(\EasySwoole\EasySwoole\SysConst::HTTP_GLOBAL_ON_REQUEST, function (Request $request, Response $response): bool {
